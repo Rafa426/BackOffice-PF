@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inicia sesion en DevBoard para administrar tus proyectos.">
+  <title>Iniciar sesion - DevBoard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-auth">
+
+  <header class="encabezado-auth">
+    <a class="logo" href="login.html">&gt;_ DevBoard</a>
+  </header>
+
+  <main class="tarjeta">
+    <h1>Iniciar sesion</h1>
+    <p class="subtitulo">Entra con tu correo y contrasena.</p>
+
+    <form action="home.html">
+      <label for="email">Correo electronico</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Contrasena</label>
+      <input type="password" id="password" name="password" minlength="6" maxlength="20" required>
+
+      <button type="submit" class="boton">Entrar</button>
+    </form>
+
+    <p class="enlace-extra">Aun no tienes cuenta? <a href="register.html">Crear cuenta</a></p>
+  </main>
+
+</body>
+</html>

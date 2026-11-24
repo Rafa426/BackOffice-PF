@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crea tu cuenta en DevBoard para administrar tus proyectos.">
+  <title>Crear cuenta - DevBoard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-auth">
+
+  <header class="encabezado-auth">
+    <a class="logo" href="login.html">&gt;_ DevBoard</a>
+  </header>
+
+  <main class="tarjeta">
+    <h1>Crear cuenta</h1>
+    <p class="subtitulo">Llena tus datos para registrarte.</p>
+
+    <form action="login.html">
+      <label for="name">Nombre completo</label>
+      <input type="text" id="name" name="name" minlength="3" required>
+
+      <label for="email">Correo electronico</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="itsonId">ID de ITSON</label>
+      <input type="text" id="itsonId" name="itsonId" pattern="[0-9]{12}" maxlength="12" required>
+      <p class="ayuda">Son 12 digitos.</p>
+
+      <label for="password">Contrasena</label>
+      <input type="password" id="password" name="password" minlength="6" maxlength="20" required>
+      <p class="ayuda">Entre 6 y 20 caracteres.</p>
+
+      <button type="submit" class="boton">Crear cuenta</button>
+    </form>
+
+    <p class="enlace-extra">Ya tienes cuenta? <a href="login.html">Iniciar sesion</a></p>
+  </main>
+
+</body>
+</html>

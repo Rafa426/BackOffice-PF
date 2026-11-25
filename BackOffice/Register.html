@@ -17,7 +17,7 @@
     <h1>Crear cuenta</h1>
     <p class="subtitulo">Llena tus datos para registrarte.</p>
 
-    <form action="login.html">
+    <form id="form-register">
       <label for="name">Nombre completo</label>
       <input type="text" id="name" name="name" minlength="3" required>
 
@@ -25,18 +25,20 @@
       <input type="email" id="email" name="email" required>
 
       <label for="itsonId">ID de ITSON</label>
-      <input type="text" id="itsonId" name="itsonId" pattern="[0-9]{12}" maxlength="12" required>
-      <p class="ayuda">Son 12 digitos.</p>
+      <input type="text" id="itsonId" name="itsonId" pattern="[0-9]{6}" maxlength="6" required>
+      <p class="ayuda">Son 6 digitos.</p>
 
       <label for="password">Contrasena</label>
       <input type="password" id="password" name="password" minlength="6" maxlength="20" required>
       <p class="ayuda">Entre 6 y 20 caracteres.</p>
 
       <button type="submit" class="boton">Crear cuenta</button>
+      <p class="mensaje" id="mensaje"></p>
     </form>
 
     <p class="enlace-extra">Ya tienes cuenta? <a href="login.html">Iniciar sesion</a></p>
   </main>
 
+  <script src="js/register.js"></script>
 </body>
 </html>

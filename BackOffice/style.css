@@ -167,3 +167,18 @@ input:focus {
     padding: 15px;
   }
 }
+
+.mensaje {
+  min-height: 20px;
+  margin: 15px 0 0;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: #f87171;
+}
+
+.exito {
+  color: #4ade80;
+}
+

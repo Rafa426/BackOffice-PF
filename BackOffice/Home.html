@@ -12,14 +12,48 @@
   <header class="barra">
     <a class="logo" href="home.html">&gt;_ DevBoard</a>
     <nav>
-      <a class="boton-salir" href="login.html">Cerrar sesion</a>
+      <a class="boton-salir" id="btn-salir" href="login.html">Cerrar sesion</a>
     </nav>
   </header>
 
   <main class="contenido">
-    <h1>Home</h1>
-    <p>Bienvenido al backoffice.</p>
+        <div class="titulo-seccion">
+      <div>
+        <h1>Mis proyectos</h1>
+        <p>Los proyectos que se muestran en tu portafolio.</p>
+      </div>
+      <button type="button" class="boton-chico" id="btn-agregar">Agregar proyecto</button>
+    </div>
+
+    <section class="formulario-proyecto oculto" id="seccion-form">
+      <h2 id="titulo-form">Nuevo proyecto</h2>
+      <form id="form-proyecto">
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" minlength="3" maxlength="100" required>
+
+        <label for="descripcion">Descripcion</label>
+        <textarea id="descripcion" rows="4" minlength="3" maxlength="1024" required></textarea>
+
+        <label for="repositorio">Repositorio (opcional)</label>
+        <input type="url" id="repositorio" minlength="10" maxlength="300">
+
+        <label for="tecnologias">Tecnologias</label>
+        <input type="text" id="tecnologias">
+        <p class="ayuda">Separadas por coma, por ejemplo: HTML, CSS, JS</p>
+
+        <div class="botones-form">
+          <button type="submit" class="boton-chico">Guardar</button>
+          <button type="button" class="boton-cancelar" id="btn-cancelar">Cancelar</button>
+        </div>
+        <p class="mensaje" id="mensaje"></p>
+      </form>
+    </section>
+
+    <section class="panel" id="panel">
+      <p class="vacio">Todavia no tienes proyectos</p>
+    </section>
   </main>
 
+  <script src="js/home.js"></script>
 </body>
 </html>

@@ -83,9 +83,8 @@ function crearTarjeta(proyecto) {
   
   
   botonEditar.onclick = function () {
-    llenarFormulario(proyecto);
+    pedirProyecto(proyecto._id);
   };
-
   botonEliminar.onclick = function () {
     eliminarProyecto(proyecto._id);
   };
@@ -99,6 +98,20 @@ function crearTarjeta(proyecto) {
   tarjeta.appendChild(botones);
 
   return tarjeta;
+}
+
+// pide un proyecto por id y lo pasa al formulario
+async function pedirProyecto(id) {
+  var respuesta = await fetch(URL_API + "/projects/" + id, {
+    headers: { "auth-token": token }
+  });
+
+  if (respuesta.ok) {
+    var proyecto = await respuesta.json();
+    llenarFormulario(proyecto);
+  } else {
+    alert("No se pudo cargar el proyecto");
+  }
 }
 
 // pasa los datos del proyecto al formulario
